@@ -4,8 +4,7 @@ counter = 0
 def turn_count(board)
   counter = 0
   board.count do |space|
-    (space.include? " ")
-    counter = 9-space.to_i
+    (space.exclude? " ")
   end
 end
 
