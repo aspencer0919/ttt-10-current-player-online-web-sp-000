@@ -4,7 +4,7 @@ counter = 0
 def turn_count(board)
   counter = 0
   board.count do |space|
-    (space.include_any? "X", "O")
+    (space.include? "X", "O")
   end
 end
 
