@@ -3,8 +3,11 @@ counter = 0
 
 def turn_count(board)
   counter = 0
-  board.count do |space|
-    (space.include? " ")
+  board.each do |space|
+    if space == "X" || space == "O"
+      counter += 1
+    end
+    counter
   end
 end
 
